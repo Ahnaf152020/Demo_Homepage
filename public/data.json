@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "Pother Panchali","imageUrl": "/Images/Book1.jpg", "caption": "Pother Panchali"  },
+    { "id": 2, "name": "Gora", "imageUrl": "/Images/Book2.jpg", "caption": "Gora" },
+    { "id": 3, "name": "Srikanto", "imageUrl": "/Images/Book3.jpg", "caption": "Srikanto"  },
+    { "id": 4, "name": "Sonar Kella", "imageUrl": "/Images/Book4.jpg", "caption": "Sonar Kella" }
+  ]
+
+
+  
+  
