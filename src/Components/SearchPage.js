@@ -4,6 +4,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import InputAdornment from '@mui/material/InputAdornment';
+import SearchIcon from '@mui/icons-material/Search';
 
 const SearchPage = () => {
   const [data, setData] = useState([]);
@@ -35,12 +37,25 @@ const SearchPage = () => {
         margin="normal"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
       />
-      <List>
-        {filteredData.map(item => (
-          <ListItem key={item.id}>{item.name}</ListItem>
-        ))}
-      </List>
+      {filteredData.length === 0 ? (
+        <Typography variant="h6" component="p" gutterBottom>
+          No results found
+        </Typography>
+      ) : (
+        <List>
+          {filteredData.map(item => (
+            <ListItem key={item.id}>{item.name}</ListItem>
+          ))}
+        </List>
+      )}
     </Container>
   );
 };
